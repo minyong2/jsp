@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 	<c:if test="${name.equals('손흥민')}">
 		<h4>코리아 만세!</h4>
 	</c:if>
-	
+
 	<!-- if else를 구현하고 싶을 때 -->
 	<c:choose>
 		<c:when test="${size <= 100 }">
@@ -29,13 +29,13 @@
 		<c:when test="${size < 200 }">
 			<h4>사이즈는 200미만입니다.</h4>
 		</c:when>
-		
-		
-		<c:otherwise >
+
+
+		<c:otherwise>
 			<h4>사이즈는 200이상입니다.</h4>
 		</c:otherwise>
 	</c:choose>
-	
+
 	<!-- JSP 반복문 -->
 	<!-- for(String str:wsgList){
 			println(x)} -->
@@ -50,8 +50,13 @@
 	</c:forEach>
 	<h1>${mapList[0].no}</h1>
 	
+	<!-- for-each에서 for문처럼 돌리기 -->
+	<c:forEach begin="1" end="5" var="i">
+		<h4>${i}</h4>
+	</c:forEach>
 
-	
-	
+
+
+
 </body>
 </html>
